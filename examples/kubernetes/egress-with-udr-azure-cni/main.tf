@@ -21,6 +21,7 @@ resource "azurerm_subnet" "internal" {
   address_prefixes     = ["10.1.0.0/22"]
 }
 
+/*
 resource "azurerm_route_table" "example" {
   name                          = "${var.prefix}fwrt"
   location                      = azurerm_resource_group.example.location
@@ -39,6 +40,7 @@ resource "azurerm_subnet_route_table_association" "example" {
   subnet_id      = azurerm_subnet.internal.id
   route_table_id = azurerm_route_table.example.id
 }
+*/
 
 resource "azurerm_kubernetes_cluster" "example" {
   name                = "${var.prefix}-k8s"
